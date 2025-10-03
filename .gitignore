@@ -2,4 +2,4 @@
 /env
 /__pycache__
 /test.py
-vectorstore/**/*.bin
+/vectorstore/**/*.bin
