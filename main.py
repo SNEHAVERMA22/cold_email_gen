@@ -14,7 +14,7 @@ def create_streamlit_app():
 
     url_input = st.text_input(
         "Enter a Job Posting URL:",
-        value="https://careers.nike.com/lead-machine-learning-engineer/job/R-62501"
+        value="https://careers.nike.com/senior-aiml-engineer/job/R-66196"
     )
     submit_button = st.button("Submit")
 
