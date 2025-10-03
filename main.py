@@ -50,21 +50,21 @@ def create_streamlit_app():
         # Processing the URL
         with st.spinner("Processing the URL…"):
             try:
-                st.write("Loading URL:", url_input)
+                
                 loader = WebBaseLoader(url_input)
                 docs = loader.load()
-                st.write("Docs returned:", len(docs))
+                
                 if not docs:
                     st.error("No document loaded by WebBaseLoader.")
                     return
 
                 document = docs[0]
-                st.write("Document length:", len(document.page_content))
+                
                 data = clean_text(document.page_content)
-                st.write("Cleaned data length:", len(data))
+                
 
                 portfolio.load_portfolio()
-                st.write("Portfolio loaded. Querying jobs…")
+                
 
                 jobs = llm.extract_jobs(data)
                 st.write("Jobs extracted:", len(jobs))
